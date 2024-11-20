@@ -1,7 +1,7 @@
 export interface lineChartsProps {
-    month: string;
+    month?: string;
     avgPrice: number;
-    marketAvgPrice?: number;
+    marketAvgPrice: number;
 }
 
 export interface lineChartsDataProps {

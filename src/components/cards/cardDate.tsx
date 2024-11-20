@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import {dayDataProps} from "@/types/calendar"; 
 import BarChart from '../icons/barChart';
 

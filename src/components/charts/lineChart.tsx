@@ -1,6 +1,6 @@
 "use client" 
 import React from 'react';
-import {lineChartsDataProps} from "@/types/lineCharts"; 
+import {lineChartsDataProps, lineChartsProps} from "@/types/lineCharts"; 
 import {
     Chart as ChartJS,
     CategoryScale,
@@ -30,6 +30,7 @@ const LineChart = ({lineChartData}: lineChartsDataProps) => {
     const avgPrices = Array.from({ length: lineChartData.length }, (_, i) => lineChartData[i].avgPrice);
     const marketAvgPrices = Array.from({ length: lineChartData.length }, (_, i) => lineChartData[i].marketAvgPrice);
 
+    // eslint-disable-next-line
     const data:any = {
         labels,
         datasets: [
@@ -51,6 +52,7 @@ const LineChart = ({lineChartData}: lineChartsDataProps) => {
         ],
       };
 
+    // eslint-disable-next-line
     const options:any = {
         responsive: true, 
         scales: {
@@ -73,8 +75,8 @@ const LineChart = ({lineChartData}: lineChartsDataProps) => {
         },
       };
 
-      function calculateAverages(data:any) {
-        const total = data.reduce((acc:any, item:any) => {
+      function calculateAverages(data:lineChartsProps[]) {
+        const total = data.reduce((acc:lineChartsProps, item:lineChartsProps) => {
             acc.avgPrice += item.avgPrice;
             acc.marketAvgPrice += item.marketAvgPrice;
             return acc;
