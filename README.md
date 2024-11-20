@@ -4,26 +4,29 @@ See online [https://walkway.vercel.app/](https://walkway.vercel.app/)
 
 ## Getting Started
 
-First, clon the project locally and install the dependencies:
+First, clone the project locally and install the dependencies:
 
 ````bash
 npm install --force
+````
 
- the development server:
+### Why use --force flag
+The project was built using the latest version of Next.js, which incorporates React 19 RC. To prevent compatibility issues when installing dependencies, this specific flag was utilized:
+
+
+Second, start the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ````
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+
+## File structure
+The project is organized following this guideline:
+<img src="" alt="File structure">
 
 ## Learn More
 
